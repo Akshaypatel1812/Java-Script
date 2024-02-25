@@ -1,0 +1,23 @@
+.box{
+    height: 80px;
+    width: 80px;
+    border : 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+#box1{
+    background: yellow;
+}
+
+#box2{
+    background: blue;
+}
+
+#box3{
+    background: green;
+}
+
+#box4{
+    background: red;
+}

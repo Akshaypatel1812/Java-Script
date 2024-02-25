@@ -1,0 +1,30 @@
+body{
+    background-color: #212121;
+    color: white ;
+    display: flex; /* Add flex display to body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    height: 100vh; /* Use viewport height for full height */
+    margin: 0;
+}
+
+.parent{
+    background-color: #212121;
+    text-align: center;
+}
+
+#time{
+    background: orange;
+    border: 1px solid orange;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    display: flex; /* Add flex display to body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    
+    color: #212121;
+    font-size: 30px;
+    margin: 0;
+
+}

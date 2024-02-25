@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <!-- <script src="MiniProjects\theme.js"></script> -->
+  </head>
+  <body>
+    <div class="parent" id="parent">
+      <div class="box" id="box1">Yellow</div>
+      <div class="box" id="box2">Blue</div>
+      <div class="box" id="box3">Green</div>
+      <div class="box" id="box4">Red</div>
+    </div>
+    <script>
+        
+
+      /*let myBox = document.getElementById("box1");
+      let body=document.body;
+      myBox.addEventListener('click',(e)=>{
+         body.style.backgroundColor='black';
+      })*/
+
+      let myBoxes=document.querySelectorAll('.box')
+      let body=document.body;
+      myBoxes.forEach((e)=>{
+        e.addEventListener('click',(f)=>{
+           if(f.target.id==="box1"){
+            body.style.backgroundColor='yellow';
+           }
+
+           if(f.target.id==="box2"){
+            body.style.backgroundColor='blue';
+           }
+
+           if(f.target.id==="box3"){
+            body.style.backgroundColor='green';
+           }
+
+           if(f.target.id==="box4"){
+            body.style.backgroundColor='red';
+           }
+
+        })
+      })
+    </script>
+  </body>
+</html>
