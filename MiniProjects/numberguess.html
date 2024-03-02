@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .guess-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        box-sizing: border-box;
+      }
+
+      .submit-btn {
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      .win {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: large;
+        color: green;
+      }
+
+      .loose{
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: large;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Guess the Number Game</h1>
+      <p>Guess a number between 1 and 100</p>
+      <input
+        type="number"
+        class="guess-input"
+        placeholder="Enter your guess"
+        min="1"
+        max="100"
+      />
+      <button class="submit-btn">Submit Guess</button>
+      <div class="result"></div>
+      <div class="win"></div>
+      <div class="loose"></div>
+    </div>
+
+    <script>
+      let guesses = 1;
+      let random = parseInt(Math.random() * 100 + 1);
+      let message = document.querySelector(".result");
+      let win = document.querySelector(".win");
+      console.log(random);
+      let submit = document.querySelector(".submit-btn");
+      submit.addEventListener("click", function (e) {
+        e.preventDefault();
+        guesses += 1;
+        if (guesses < 6) {
+          let num = document.querySelector(".guess-input").value;
+          if (num < random) {
+            message.innerHTML = "<h3>choosen number is low</h3>";
+          } else if (num > random) {
+            message.innerHTML = "<h3>choosen number is high</h3>";
+          } else {
+            win.innerHTML = "<h3>You Win!...</h3>";
+            message.innerHTML = "";
+          }
+
+          document.querySelector(".guess-input").value = "";
+        }else{
+             let loose=document.querySelector('.loose')
+             loose.innerHTML = "<h3>You loose!...Try Again</h3>";
+        }
+      });
+    </script>
+  </body>
+</html>
