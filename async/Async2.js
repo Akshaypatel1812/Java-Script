@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Akshay", num);
     num = num + 1;
   }
-  let intervalID = setInterval(interval, 1000);
+  let intervalID
   document.getElementById("button1").addEventListener("click", () => {
-    setInterval(interval, 1000);
+    intervalID=setInterval(interval, 1000);
   });
 
   document.getElementById("button2").addEventListener("click", () => {
